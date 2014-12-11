@@ -1,0 +1,22 @@
+<!doctype html>
+<title>AJAX tester</title>
+
+
+<label for='city'>City name</label>
+<input id='city'>
+<input type='button' onclick='makeRequest()'>
+
+<p id='output'></p>
+
+<script>
+    function makeRequest() {
+        var request = new XMLHttpRequest();
+        var city = document.getElementById('city').value;
+        request.open("get", "?" + city);
+        request.onload = function() {
+
+            
+        };
+        request.send();
+    }
+</script>
